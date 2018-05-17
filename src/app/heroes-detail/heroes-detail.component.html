@@ -1,0 +1,31 @@
+<div class="heroes-detail" *ngIf="hero" [@modalFadeZoom]
+[ngStyle]="{'background-image': 'url('+ bgName +')'}">
+
+    <h2>{{ hero.name | uppercase }} </h2>
+    <!-- <img src="../../assets/img/Lina.png"> -->
+    <!-- <img src= "getImgName(hero)"> -->
+    <!-- <img src= {{imgName}}> -->
+    <img src= {{hero.img}}>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </label>
+    </div>
+    <div class="skills">
+
+      <div> </div>
+      <div> </div>
+      <div> </div>
+      <div> </div>
+
+    </div>
+</div>
+
+<!-- <button (click)="getImgName(hero)">BUTTON</button> -->
+
+<!-- <div [ngStyle]="{'background-image': 'url(' + photo + ')'}"></div> -->
+
+<!-- [ngStyle]= {{bgNameStyle }}> -->
+<!-- [ngStyle]="{'background-image': 'url(' + {{bgName}} +')'}"> -->
+<!-- [ngStyle]="{'background-image': 'url(../../assets/img/fullbody_lina.png)'}"> -->

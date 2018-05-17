@@ -1,0 +1,41 @@
+.heroes-detail {
+    text-align: center;
+    height: 950px;
+    width: 475px;
+    float: right;
+    /* width: auto;
+    height: auto; */
+    /* max-width:475px;  */
+    /* max-height: 950px; */
+}
+
+.heroes-detail h2 {
+    font-size: 23px;
+    padding: 2px;
+    margin:2px;
+    font-style: normal;
+    font-family: 'Lucida Sans';
+    
+}
+
+.heroes-detail img {
+    border-color: blue;
+    border-style: ridge;
+    width: auto;
+    height: auto;
+    max-width: 105px;
+    max-height: 50px;
+
+    /* size: 150px; */
+    /* background-image: ; */
+}
+
+.skills div {
+    text-align: center;
+    margin: 7px;
+    border-color: lightslategray;
+    border-style: ridge;
+    width: 60px;
+    height: 60px;
+    float: left;
+}

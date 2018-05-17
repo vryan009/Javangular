@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  <div class="row" >
+      <div class="heroes-list col-sm-4">
+          <!-- <h2> HEROES </h2>
+          <ul class="heroes">
+            <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+              <span class="badge"> {{hero.id}}</span> {{ hero.name}}
+            </li>
+          </ul> -->
+          <div class="row type">
+            <div class="attribute col">
+                <img src={{iconStr}}>
+            </div>        
+            <div class="col-sm-2 icon" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
+                <img src = {{hero.icon}} (click)="onSelect(hero)">
+            </div>
+          </div>
+          <div class="row type" >
+              <div class="attribute">
+                <img src={{iconAgi}}>
+              </div>        
+            <div class="col-sm-2 icon" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
+                <img src = {{hero.icon}} (click)="onSelect(hero)">
+            </div>
+          </div>
+          <div class="row type" >
+              <div class="attribute">
+                <img src={{iconInt}}>
+              </div>        
+            <div class="col-sm-2 icon" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
+                <img src = {{hero.icon}} (click)="onSelect(hero)">
+            </div>
+          </div>
+      </div>
+
+      <div class="heroes-desc col-sm-3" *ngIf="selectedHero" [@modalFadeZoom]>
+            <p> {{selectedHero.name | uppercase}}</p>
+        </div>
+
+        <div class="heroes-detail col-sm-5" *ngIf="selectedHero" [@modalFadeZoom]>
+          <app-heroes-detail  [@modalFadeZoom] [hero]="selectedHero"></app-heroes-detail>
+        </div>
+  </div>
+  
+</div>
+
+
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="heroes-list col-sm-6">
+          <h2> HEROES </h2>
+          <ul class="heroes">
+            <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+              <span class="badge"> {{hero.id}}</span> {{ hero.name}}
+            </li>
+          </ul>
+        </div>  
+        <div class="heroes-detail col-sm-6" *ngIf="selectedHero" [@modalFadeZoom]>
+          <app-heroes-detail  [hero]="selectedHero"></app-heroes-detail>
+        </div>
+    </div>
+  </div> -->
+  
+
+<!-- <div class="heroes-list">
+  <h2> HEROES </h2>
+  <ul class="heroes">
+      <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+        <span class="badge"> {{hero.id}}</span> {{ hero.name}}
+      </li>
+  </ul>
+</div>   -->
+  
+
+
+<!-- <div *ngIf="selectedHero">
+  <h2> {{ selectedHero.name | uppercase }} Details </h2>
+  <div><span>id: </span> {{selectedHero.id}}</div>
+  <div><span>type: </span> {{selectedHero.type}}</div>
+
+  <div>
+    <label> name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+</div> -->
+
+<!-- <div class="heroes-detail" *ngIf="selectedHero" [@modalFadeZoom]>
+    <app-heroes-detail  [hero]="selectedHero"></app-heroes-detail>
+</div> -->
+
+<!-- <app-heroes-detail [hero]="selectedHero"></app-heroes-detail> -->
